@@ -22,4 +22,12 @@ describe(Place) do
       expect(Place.all()).to(eq([test_place]))
     end
   end
+
+  describe('.clear') do
+    it('empties all places saved') do
+      Place.new('kentucky').save()
+      Place.clear()
+      expect(Place.all()).to(eq([]))
+    end
+  end
 end
