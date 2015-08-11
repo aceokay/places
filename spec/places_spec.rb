@@ -1,8 +1,11 @@
 require('rspec')
 require('places')
-require('pry')
 
 describe(Place) do
+  before() do
+    Place.clear()
+  end
+
   describe('#location') do
     it('lets you enter a location') do
       test_place = Place.new('kansas')
