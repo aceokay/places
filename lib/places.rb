@@ -20,4 +20,9 @@ class Place
   define_singleton_method(:clear) do
     @@all_places = []
   end
+
+  # define_singleton_method(:delete) do |place|
+  #   binding.pry
+  #   @@all_places.delete_at(@@all_places.index(place))
+  # end
 end
