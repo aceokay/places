@@ -1,7 +1,7 @@
 require("sinatra")
 require("sinatra/reloader")
 also_reload("lib/**/*.rb")
-require("./lib/place")
+require("./lib/places")
 
 get("/") do
   @places = Place.all()
@@ -10,7 +10,7 @@ end
 
 post("/places") do
   location = params.fetch("location")
-  place = place.new(location)
+  place = Place.new(location)
   place.save()
   erb(:success)
 end
